@@ -1,6 +1,5 @@
 import "../scss/style.scss"
 const Waves = require('node-waves');
-// const json = require('./pokemon_list.json');
 const fetch = require('node-fetch');
 
 
