@@ -1,0 +1,35 @@
+.logo {
+   &__container-wrapper {
+      width: calc(100% - 7rem);
+      height: 4.5rem;
+      margin-left: 7rem;
+      background: var(--bg-nav);
+   }
+
+   &__container {
+      height: 100%;
+      width: 100%;
+      background: var(--bg-logo);
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      border-radius: 0.5rem 0 0 0;
+   }
+
+   &__wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 90%;
+      width: 11rem;
+      margin-left: 1rem;
+      padding: 0 2rem;
+   }
+
+   &__img {
+      position: absolute;
+      transform: translateY(0.2rem);
+      width: 9.8rem;
+   }
+}

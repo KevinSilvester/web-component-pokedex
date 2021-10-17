@@ -1,0 +1,100 @@
+@import "reseter.css/src/scss/reseter";
+@import "node-waves/src/scss/waves";
+
+:root {
+   --white: hsl(0, 0%, 100%);
+   --white-blue-1: hsl(215, 100%, 95%);
+   --white-blue-2: hsl(215, 100%, 86%);
+   --white-blue-3: hsl(215, 100%, 90%);
+   --blue-1: hsl(232, 71%, 51%);
+   --blue-2: hsl(226, 100%, 61%);
+   --blue-3: hsl(226, 94%, 34%);
+   --black-purple: hsl(268, 100%, 11%);
+   --black-blue: hsl(235, 86%, 17%);
+   --green-1: hsl(115, 93%, 89%);
+   --green-2: hsl(94, 100%, 50%);
+   --green-3: hsl(115, 93%, 83%);
+   --pink-1: hsl(0, 100%, 87%);
+   --pink-2: hsl(0, 100%, 77%);
+}
+
+:root[data-theme="light"] {
+   --bg-primary: var(--white-blue-1);
+   --bg-secondary: var(--white-blue-2);
+   --border-primary: var(--blue-1);
+   --border-secondary: var(--blue-3);
+   --txt-primary: var(--blue-2);
+   --txt-secondary: var(--blue-3);
+   --bg-nav: linear-gradient(0deg, var(--black-purple) 0%, var(--black-blue) 100%);
+   --bg-logo: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-secondary) 40%, var(--bg-primary) 100%);
+   --bg-btn: var(--blue-1);
+   --bg-add-btn: var(--green-1);
+   --border-add-btn: var(--green-2);
+   --hov-add-btn: var(--green-3);
+   --bg-rem-btn: var(--pink-1);
+   --hov-rem-btn: var(--pink-2);
+}
+
+* {
+   margin: 0;
+   padding: 0; 
+   box-sizing: border-box;
+   
+   &::after, &::before {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+   }
+
+   scrollbar-color: var(--blue-3) var(--bg-secondary);
+   scrollbar-width: thin;
+
+   &::-webkit-scrollbar {
+      width: 12.5px;
+
+      &-track {
+         background: var(--bg-secondary);
+      }
+
+      &-thumb {
+         background: var(--blue-3);
+         transition: all 0.3s ease-in-out 0.1s;
+         border-radius: 0.7rem;
+         min-height: 50px;
+
+         &:hover {
+            background: var(--blue-1);
+         }
+
+         &:active {
+            background: var(--blue-2);
+         }
+      }
+   }
+}
+
+body {
+   height: 100%;
+   width: 100vw;
+   font-family: 'Nunito', sans-serif;
+   overflow-x: hidden;
+   background: var(--bg-primary);
+}
+
+.main-content-wrapper {
+   position: absolute;
+   height: fit-content;
+   width: calc(100% - 7rem);
+   margin-left: 7rem;
+   background: var(--bg-nav);
+}
+
+@import "./nav";
+@import "./logo";
+@import "./cards";
+@import "./home";
+@import "./list";
+@import "./docs";
+@import "./loading";
+
+ 

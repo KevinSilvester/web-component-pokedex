@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>JSON Data Project</title>
+   <link rel="icon" type="image/png" href="./img/pokeball-favicon.png">
+   <script src="https://kit.fontawesome.com/b2839b0b7f.js" crossorigin="anonymous"></script>
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+   <div class="nav__container">
+      <ul class="nav__list" role="navigation">
+         <li id="home" class="nav__tiles active">
+            <i class="fas fa-home"></i>
+            <span class="nav__name">Home</span>
+         </li>
+         <li id="list" class="nav__tiles ripple">
+            <i class="fas fa-list-ul"></i>
+            <span class="nav__name">Your List</span>
+         </li>
+         <li id="docs" class="nav__tiles ripple" style="display: none !important;">
+            <i class="far fa-question-circle"></i>
+            <span class="nav__name">Documentaion</span>
+         </li>
+      </ul>
+   </div>
+   <div class="logo__container-wrapper">
+      <div class="logo__container">
+         <div class="logo__wrapper">
+            <img src="img/pokemon-logo.png" alt="Pokémon Logo" class="logo__img">
+         </div>
+      </div>
+   </div>
+   <div class="main-content-wrapper">
+      <!-- Home Page -->
+      <div class="home__container active">
+         <div class="home__content">
+         </div>
+         <!-- Loading animation -->
+         <div class="home__pos--bottom lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+         </div>
+         <button class="home__load-more home__pos--bottom ripple">
+            <i class="fas fa-angle-double-down"></i>
+         </button>
+      </div>
+
+      <!-- User List Page -->
+      <div class="list__container">
+         <div class="list__col list__col--1">
+            <span class="list__title">Your List</span>
+            <div class="list__content"></div>
+         </div>
+         <div class="list__col list__col--2">
+            <span class="list__title">Search Pokémon</span>
+            <form class="list__form">
+               <input class="list__search" type="text" placeholder="Search by Name" id="search">
+               <button class="list__search-submit ripple">
+                  <i class="fas fa-search"></i>
+               </button>
+            </form>
+            <div class="list__search-result"></div>
+            <div class="list__option-container">
+               <button class="list__option list__option--add ripple">
+                  <i class="fas fa-plus"></i>
+               </button>
+               <button class="list__option list__option--remove ripple">
+                  <i class="fas fa-minus"></i>
+               </button>
+            </div>
+         </div>
+      </div>
+      
+      <!-- Documentaion Page -->
+      <div class="docs__container">
+
+      </div>
+   </div>
+
+   <!-- Custom element template build within html document instead of in javascript file -->
+   <!-- <template id="pokemon-card-template">
+      <div part="container">
+         <img id="img" part="img">
+         <ul part="col">
+            <li part="row">
+               <span part="row-title">Name:</span>
+               <span id="name" part="row-stat"></span>
+            </li>
+            <li part="row">
+               <span part="row-title">Height:</span>
+               <span id="height" part="row-stat"></span>
+            </li>
+            <li part="row">
+               <span part="row-title">Weight:</span>
+               <span id="weight" part="row-stat"></span>
+            </li>
+            <li part="row">
+               <span part="row-title">HP:</span>
+               <span id="hp" part="row-stat"></span>
+            </li>
+            <li part="row">
+               <span part="row-title">Attack:</span>
+               <span id="att" part="row-stat"></span>
+            </li>
+         </ul>
+         <ul part="col">
+            <li part="row">
+               <span  part="row-title">Defense:</span>
+               <span id="def" part="row-stat"></span>
+            </li>
+            <li part="row">
+               <span part="row-title">Special-Attack:</span>
+               <span id="specAtt" part="row-stat"></span>
+            </li>
+            <li part="row">
+               <span part="row-title">Special-Defense:</span>
+               <span id="specDef" part="row-stat"></span>
+            </li>
+            <li part="row">
+               <span part="row-title">Speed:</span>
+               <span id="speed" part="row-stat"></span>
+            </li>
+            <li part="row">
+               <a id="info" role="button" part="row-info ripple" target="_blank">
+                  More Info
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-right" part="row-info-svg" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path fill="currentColor" d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"></path></svg>
+               </a>
+            </li>
+         </ul>
+      </div>
+   </template> -->
+</body>
+</html>

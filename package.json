@@ -1,0 +1,40 @@
+{
+  "name": "json-data-project",
+  "version": "1.1.0",
+  "description": "Json data project that load pokemon stats from an api which is then displayed on webpage.",
+  "main": "src/js/index.js",
+  "scripts": {
+    "build:dev": "webpack --config webpack.dev.js",
+    "build:prod": "webpack --config webpack.prod.js",
+    "watch": "webpack --watch",
+    "serve:dev": "webpack serve --config webpack.dev.js",
+    "serve:prod": "webpack serve --config webpack.prod.js"
+  },
+  "author": "Kevin Silvester",
+  "license": "ISC",
+  "dependencies": {
+    "node-waves": "^0.7.6",
+    "reseter.css": "^1.1.2"
+  },
+  "devDependencies": {
+    "@webpack-cli/generators": "^2.0.0",
+    "autoprefixer": "^10.2.5",
+    "css-loader": "^5.2.4",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.1",
+    "json-loader": "^0.5.7",
+    "mini-css-extract-plugin": "^1.5.0",
+    "node-fetch": "^2.6.1",
+    "postcss": "^8.2.12",
+    "postcss-loader": "^5.2.0",
+    "postcss-unprefix": "^2.1.4",
+    "sass": "^1.32.11",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.35.1",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-manifest-plugin": "^3.1.1",
+    "webpack-merge": "^5.7.3"
+  }
+}

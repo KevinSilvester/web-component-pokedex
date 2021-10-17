@@ -1,0 +1,123 @@
+.list {
+   &__container {
+      position: relative;
+      min-height: 100vh;
+      width: 100%;
+      background: var(--bg-primary);
+      border-radius: 0 0 0 0.5rem;
+      display: none;
+      justify-content: center;
+
+      &.active {
+         display: flex !important;
+      }
+   }
+
+   &__col {
+      width: 50%;
+      padding: 0.75rem;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   &__col--1 {
+      height: fit-content;
+   }
+
+   &__col--2 {
+      height: 100%;
+   }
+
+   &__title {
+      font-weight: 700;
+      color: var(--txt-primary);
+      font-size: 3rem;
+   }
+
+   &__form {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+   }
+
+   &__search {
+      margin: 1rem 0;
+      border-radius: 0.5rem;
+      width: 24rem;
+      height: 2.5rem;
+      border: 3px solid var(--bg-secondary);
+      outline: none;
+   }
+
+   &__search-submit {
+      position: relative;
+      height: 2.25rem;
+      border: 3px solid var(--txt-primary);
+      background: var(--bg-secondary);
+      border-radius: 0.4rem;
+      width: 2.8rem;
+      transform: translate(375%, -150%);
+      outline: none;
+   }
+
+   &__search-result {
+      width: fit-content;
+      height: fit-content;
+      position: relative;
+   }
+
+   &__option-container {
+      display: flex;
+      margin-top: 1.5rem;
+      position: relative;
+      width: 24rem;
+      height: 3.5rem;
+      align-items: center;
+      justify-content: space-around;
+   }
+
+   &__option {
+      height: 100%;
+      width: 5rem;
+      height: 100%;
+      width: 5rem;
+      border-radius: 0.75rem;
+      font-size: 1.5rem;
+      display: grid;
+      place-items: center;
+      transition: all 0.25s ease-in-out;
+      outline: none;
+
+      &--add {
+         background: var(--green-1);
+         color: var(--green-2);
+         border: 5px solid var(--green-2);
+
+         &:hover {
+            background: var(--green-3);
+         }
+      }
+
+      &--remove {
+         background: var(--bg-rem-btn);
+         border: 5px solid red;
+         color: red;
+
+         &:hover {
+            background: var(--hov-rem-btn);
+         }
+      }
+   }
+
+   &__content {
+      margin-top: 1rem;
+
+      pokemon-card {
+         margin-bottom: 1rem;
+      }
+   }
+}
